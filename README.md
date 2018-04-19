@@ -30,3 +30,8 @@ Currently, I am deciding on a connector - if anyone knows a connector that is a 
 Each module should (yes, it's optional) have an ID EEPROM & accept a few basic commands (Enable, select channel) via I2C. This can be achieved via a PCA9500 I/O expander or ATtiny, for example. Modules without the ID/Control interface will require more configuration effort and might waste a bit more power (the central hub will probably not have power switches per module).
 
 The hub will be controlled by I2C, and a C++ library will be provided that will be usable via Arduino and Raspberry Pi. The hub will be able to be daisy-chained. 
+
+----
+
+These files are distributed under The TAPR Open Hardware License, version 1.0.  
+See LICENSE.txt or https://www.tapr.org/ohl.html
