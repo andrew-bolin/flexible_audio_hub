@@ -1,0 +1,536 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:flexibleaudiohub-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1050 2050 850  1300
+U 5AD71F32
+F0 "pi_header" 60
+F1 "pi_header.sch" 60
+F2 "Gnd" I L 1050 3250 60 
+F3 "SDA" B R 1900 2150 60 
+F4 "SCL" B R 1900 2250 60 
+F5 "Sclk" B R 1900 2700 60 
+F6 "LRclk" B R 1900 2800 60 
+F7 "I2S_out_from_pi" O R 1900 2900 60 
+F8 "I2S_in_to_pi" I R 1900 3000 60 
+F9 "5v" B L 1050 2150 60 
+F10 "3v3" O L 1050 2250 60 
+$EndSheet
+$Sheet
+S 8300 2700 550  1050
+U 5AD72A8E
+F0 "hub_conn" 60
+F1 "hub_conn.sch" 60
+F2 "+12v" I R 8850 2800 60 
+F3 "I2S_in" I L 8300 3550 60 
+F4 "I2S_out" I L 8300 3650 60 
+F5 "Sclk" I L 8300 3350 60 
+F6 "LRclk" I L 8300 3450 60 
+F7 "SDA" I L 8300 2950 60 
+F8 "SCL" I L 8300 3050 60 
+F9 "Mclk" I L 8300 3250 60 
+F10 "Gnd" I R 8850 2900 60 
+$EndSheet
+$Sheet
+S 1100 4000 500  1050
+U 5AD75A4E
+F0 "hub_power" 60
+F1 "hub_power.sch" 60
+F2 "+12v" I R 1600 4100 60 
+F3 "Gnd" I R 1600 4950 60 
+F4 "+3v3" I R 1600 4300 60 
+F5 "+5v" I R 1600 4200 60 
+$EndSheet
+$Comp
+L GND #PWR?
+U 1 1 5AD775EA
+P 950 3300
+F 0 "#PWR?" H 950 3050 50  0001 C CNN
+F 1 "GND" H 950 3150 50  0000 C CNN
+F 2 "" H 950 3300 50  0001 C CNN
+F 3 "" H 950 3300 50  0001 C CNN
+	1    950  3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5AD776BD
+P 950 2100
+F 0 "#PWR?" H 950 1950 50  0001 C CNN
+F 1 "+5V" H 950 2240 50  0000 C CNN
+F 2 "" H 950 2100 50  0001 C CNN
+F 3 "" H 950 2100 50  0001 C CNN
+	1    950  2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 5AD77CF2
+P 1700 3900
+F 0 "#PWR?" H 1700 3750 50  0001 C CNN
+F 1 "+12V" H 1700 4040 50  0000 C CNN
+F 2 "" H 1700 3900 50  0001 C CNN
+F 3 "" H 1700 3900 50  0001 C CNN
+	1    1700 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5AD77E86
+P 1950 3900
+F 0 "#PWR?" H 1950 3750 50  0001 C CNN
+F 1 "+5V" H 1950 4040 50  0000 C CNN
+F 2 "" H 1950 3900 50  0001 C CNN
+F 3 "" H 1950 3900 50  0001 C CNN
+	1    1950 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 800  2300 0    60   ~ 0
+N/C
+NoConn ~ 1050 2250
+$Comp
+L GND #PWR?
+U 1 1 5AD78117
+P 1700 5200
+F 0 "#PWR?" H 1700 4950 50  0001 C CNN
+F 1 "GND" H 1700 5050 50  0000 C CNN
+F 2 "" H 1700 5200 50  0001 C CNN
+F 3 "" H 1700 5200 50  0001 C CNN
+	1    1700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5AD781EB
+P 2200 3900
+F 0 "#PWR?" H 2200 3750 50  0001 C CNN
+F 1 "+3V3" H 2200 4040 50  0000 C CNN
+F 2 "" H 2200 3900 50  0001 C CNN
+F 3 "" H 2200 3900 50  0001 C CNN
+	1    2200 3900
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 3000 4000 1200 750 
+U 5AD78713
+F0 "hub_ctrl" 60
+F1 "hub_ctrl.sch" 60
+F2 "+3v3" I L 3000 4200 60 
+F3 "+5v" I L 3000 4100 60 
+F4 "Gnd" I L 3000 4300 60 
+F5 "SDA" B L 3000 4500 60 
+F6 "SCL" B L 3000 4600 60 
+F7 "switch_data" O R 4200 4100 60 
+F8 "switch_clk" O R 4200 4200 60 
+$EndSheet
+$Sheet
+S 8300 1400 550  1050
+U 5AD7B48D
+F0 "hub_conn" 60
+F1 "hub_conn.sch" 60
+F2 "+12v" I R 8850 1500 60 
+F3 "I2S_in" I L 8300 2250 60 
+F4 "I2S_out" I L 8300 2350 60 
+F5 "Sclk" I L 8300 2050 60 
+F6 "LRclk" I L 8300 2150 60 
+F7 "SDA" I L 8300 1650 60 
+F8 "SCL" I L 8300 1750 60 
+F9 "Mclk" I L 8300 1950 60 
+F10 "Gnd" I R 8850 1600 60 
+$EndSheet
+$Sheet
+S 5700 2700 550  1050
+U 5AD7C844
+F0 "hub_conn" 60
+F1 "hub_conn.sch" 60
+F2 "+12v" I L 5700 2850 60 
+F3 "I2S_in" I R 6250 3550 60 
+F4 "I2S_out" I R 6250 3650 60 
+F5 "Sclk" I R 6250 3350 60 
+F6 "LRclk" I R 6250 3450 60 
+F7 "SDA" I R 6250 2950 60 
+F8 "SCL" I R 6250 3050 60 
+F9 "Mclk" I R 6250 3250 60 
+F10 "Gnd" I L 5700 2950 60 
+$EndSheet
+$Sheet
+S 5200 1400 550  1050
+U 5AD7C84E
+F0 "hub_conn" 60
+F1 "hub_conn.sch" 60
+F2 "+12v" I L 5200 1500 60 
+F3 "I2S_in" I R 5750 2250 60 
+F4 "I2S_out" I R 5750 2350 60 
+F5 "Sclk" I R 5750 2050 60 
+F6 "LRclk" I R 5750 2150 60 
+F7 "SDA" I R 5750 1650 60 
+F8 "SCL" I R 5750 1750 60 
+F9 "Mclk" I R 5750 1950 60 
+F10 "Gnd" I L 5200 1600 60 
+$EndSheet
+$Sheet
+S 6600 800  1350 2950
+U 5AD7F172
+F0 "hub_core" 60
+F1 "hub_core.sch" 60
+F2 "+3v3" I L 6600 900 60 
+F3 "Gnd" I L 6600 1000 60 
+F4 "I2S_in_00" I L 6600 2250 60 
+F5 "I2S_out_00" I L 6600 2350 60 
+F6 "Sclk_00" I L 6600 2050 60 
+F7 "LRclk_00" I L 6600 2150 60 
+F8 "SDA_00" I L 6600 1650 60 
+F9 "SCL_00" I L 6600 1750 60 
+F10 "Mclk_00" I L 6600 1950 60 
+F11 "ctrl_data" I R 7950 900 60 
+F12 "ctrl_clk" I R 7950 1000 60 
+F13 "SDA_01" I L 6600 2950 60 
+F14 "SCL_01" I L 6600 3050 60 
+F15 "SDA_02" I R 7950 1650 60 
+F16 "SCL_02" I R 7950 1750 60 
+F17 "I2S_in_01" I L 6600 3550 60 
+F18 "I2S_out_01" I L 6600 3650 60 
+F19 "Sclk_01" I L 6600 3350 60 
+F20 "LRclk_01" I L 6600 3450 60 
+F21 "Mclk_01" I L 6600 3250 60 
+F22 "SDA_03" I R 7950 2950 60 
+F23 "SCL_03" I R 7950 3050 60 
+F24 "I2S_in_02" I R 7950 2250 60 
+F25 "I2S_out_02" I R 7950 2350 60 
+F26 "Sclk_02" I R 7950 2050 60 
+F27 "LRclk_02" I R 7950 2150 60 
+F28 "Mclk_02" I R 7950 1950 60 
+F29 "I2S_in_03" I R 7950 3550 60 
+F30 "I2S_out_03" I R 7950 3650 60 
+F31 "Sclk_03" I R 7950 3350 60 
+F32 "LRclk_03" I R 7950 3450 60 
+F33 "Mclk_03" I R 7950 3250 60 
+$EndSheet
+$Comp
+L +3V3 #PWR?
+U 1 1 5AD8FC7E
+P 6500 850
+F 0 "#PWR?" H 6500 700 50  0001 C CNN
+F 1 "+3V3" H 6500 990 50  0000 C CNN
+F 2 "" H 6500 850 50  0001 C CNN
+F 3 "" H 6500 850 50  0001 C CNN
+	1    6500 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AD90A29
+P 6500 1050
+F 0 "#PWR?" H 6500 800 50  0001 C CNN
+F 1 "GND" H 6500 900 50  0000 C CNN
+F 2 "" H 6500 1050 50  0001 C CNN
+F 3 "" H 6500 1050 50  0001 C CNN
+	1    6500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 5AD90F49
+P 5050 1450
+F 0 "#PWR?" H 5050 1300 50  0001 C CNN
+F 1 "+12V" H 5050 1590 50  0000 C CNN
+F 2 "" H 5050 1450 50  0001 C CNN
+F 3 "" H 5050 1450 50  0001 C CNN
+	1    5050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 3250 950  3250
+Wire Wire Line
+	950  3250 950  3300
+Wire Wire Line
+	950  2100 950  2150
+Wire Wire Line
+	950  2150 1050 2150
+Wire Wire Line
+	1600 4100 1700 4100
+Wire Wire Line
+	1700 4100 1700 3900
+Wire Wire Line
+	1950 3900 1950 4200
+Wire Wire Line
+	1950 4200 1600 4200
+Wire Wire Line
+	1600 4950 1700 4950
+Wire Wire Line
+	1700 4950 1700 5200
+Wire Wire Line
+	2200 3900 2200 4300
+Wire Wire Line
+	2200 4300 1600 4300
+Wire Wire Line
+	5750 1650 6600 1650
+Wire Wire Line
+	6600 1000 6500 1000
+Wire Wire Line
+	6500 1000 6500 1050
+Wire Wire Line
+	6500 850  6500 900 
+Wire Wire Line
+	6500 900  6600 900 
+Wire Wire Line
+	5750 1750 6600 1750
+Wire Wire Line
+	5750 1950 6600 1950
+Wire Wire Line
+	5750 2050 6600 2050
+Wire Wire Line
+	5750 2150 6600 2150
+Wire Wire Line
+	5750 2250 6600 2250
+Wire Wire Line
+	5750 2350 6600 2350
+Wire Wire Line
+	5050 1450 5050 1500
+Wire Wire Line
+	5050 1500 5200 1500
+$Comp
+L GND #PWR?
+U 1 1 5AD93B9D
+P 5050 1650
+F 0 "#PWR?" H 5050 1400 50  0001 C CNN
+F 1 "GND" H 5050 1500 50  0000 C CNN
+F 2 "" H 5050 1650 50  0001 C CNN
+F 3 "" H 5050 1650 50  0001 C CNN
+	1    5050 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1600 5050 1600
+Wire Wire Line
+	5050 1600 5050 1650
+$Comp
+L GND #PWR?
+U 1 1 5AD95AEF
+P 5550 3000
+F 0 "#PWR?" H 5550 2750 50  0001 C CNN
+F 1 "GND" H 5550 2850 50  0000 C CNN
+F 2 "" H 5550 3000 50  0001 C CNN
+F 3 "" H 5550 3000 50  0001 C CNN
+	1    5550 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 5AD95CF8
+P 5550 2800
+F 0 "#PWR?" H 5550 2650 50  0001 C CNN
+F 1 "+12V" H 5550 2940 50  0000 C CNN
+F 2 "" H 5550 2800 50  0001 C CNN
+F 3 "" H 5550 2800 50  0001 C CNN
+	1    5550 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2800 5550 2850
+Wire Wire Line
+	5550 2850 5700 2850
+Wire Wire Line
+	5700 2950 5550 2950
+Wire Wire Line
+	5550 2950 5550 3000
+Wire Wire Line
+	6250 2950 6600 2950
+Wire Wire Line
+	6600 3050 6250 3050
+Wire Wire Line
+	6250 3250 6600 3250
+Wire Wire Line
+	6600 3350 6250 3350
+Wire Wire Line
+	6250 3450 6600 3450
+Wire Wire Line
+	6600 3550 6250 3550
+Wire Wire Line
+	6250 3650 6600 3650
+$Comp
+L +12V #PWR?
+U 1 1 5AD97A7D
+P 9150 2750
+F 0 "#PWR?" H 9150 2600 50  0001 C CNN
+F 1 "+12V" H 9150 2890 50  0000 C CNN
+F 2 "" H 9150 2750 50  0001 C CNN
+F 3 "" H 9150 2750 50  0001 C CNN
+	1    9150 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AD97C95
+P 9150 2950
+F 0 "#PWR?" H 9150 2700 50  0001 C CNN
+F 1 "GND" H 9150 2800 50  0000 C CNN
+F 2 "" H 9150 2950 50  0001 C CNN
+F 3 "" H 9150 2950 50  0001 C CNN
+	1    9150 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2800 9150 2800
+Wire Wire Line
+	9150 2800 9150 2750
+Wire Wire Line
+	9150 2950 9150 2900
+Wire Wire Line
+	9150 2900 8850 2900
+Wire Wire Line
+	8300 2950 7950 2950
+Wire Wire Line
+	7950 3050 8300 3050
+Wire Wire Line
+	8300 3250 7950 3250
+Wire Wire Line
+	7950 3350 8300 3350
+Wire Wire Line
+	8300 3450 7950 3450
+Wire Wire Line
+	7950 3550 8300 3550
+Wire Wire Line
+	8300 3650 7950 3650
+$Comp
+L +12V #PWR?
+U 1 1 5AD996CC
+P 9150 1450
+F 0 "#PWR?" H 9150 1300 50  0001 C CNN
+F 1 "+12V" H 9150 1590 50  0000 C CNN
+F 2 "" H 9150 1450 50  0001 C CNN
+F 3 "" H 9150 1450 50  0001 C CNN
+	1    9150 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AD998E3
+P 9150 1650
+F 0 "#PWR?" H 9150 1400 50  0001 C CNN
+F 1 "GND" H 9150 1500 50  0000 C CNN
+F 2 "" H 9150 1650 50  0001 C CNN
+F 3 "" H 9150 1650 50  0001 C CNN
+	1    9150 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 1500 9150 1500
+Wire Wire Line
+	9150 1500 9150 1450
+Wire Wire Line
+	8850 1600 9150 1600
+Wire Wire Line
+	9150 1600 9150 1650
+Wire Wire Line
+	7950 1650 8300 1650
+Wire Wire Line
+	8300 1750 7950 1750
+Wire Wire Line
+	7950 1950 8300 1950
+Wire Wire Line
+	8300 2050 7950 2050
+Wire Wire Line
+	7950 2150 8300 2150
+Wire Wire Line
+	8300 2250 7950 2250
+Wire Wire Line
+	7950 2350 8300 2350
+Wire Wire Line
+	4200 4100 4450 4100
+Wire Wire Line
+	4200 4200 4450 4200
+Text Label 4450 4100 0    60   ~ 0
+sw_ctrl_dat
+Text Label 4450 4200 0    60   ~ 0
+sw_ctrl_clk
+Text Label 8100 900  0    60   ~ 0
+sw_ctrl_dat
+Text Label 8100 1000 0    60   ~ 0
+sw_ctrl_clk
+Wire Wire Line
+	7950 900  8100 900 
+Wire Wire Line
+	8100 1000 7950 1000
+Text Label 6000 1650 0    60   ~ 0
+pi_sda
+Text Label 6000 1750 0    60   ~ 0
+pi_scl
+Text Label 6000 1950 0    60   ~ 0
+pi_mclk
+Text Label 2150 2550 0    60   ~ 0
+pi_mclk
+Text Notes 2150 2450 0    60   ~ 0
+is there an MCLK from pi?
+Text Label 6000 2050 0    60   ~ 0
+pi_sclk
+Text Label 6000 2150 0    60   ~ 0
+pi_lrclk
+Text Label 6000 2250 0    60   ~ 0
+pi_i2sin
+Text Label 6000 2350 0    60   ~ 0
+pi_i2sout
+Text Label 1900 2150 0    60   ~ 0
+pi_sda
+Text Label 1900 2250 0    60   ~ 0
+pi_scl
+Text Label 1900 2700 0    60   ~ 0
+pi_sclk
+Text Label 1900 2800 0    60   ~ 0
+pi_lrclk
+Text Label 1900 2900 0    60   ~ 0
+pi_i2sin
+Text Label 1900 3000 0    60   ~ 0
+pi_i2sout
+Text Label 3000 4500 2    60   ~ 0
+pi_sda
+Text Label 3000 4600 2    60   ~ 0
+pi_scl
+Text Notes 800  1650 0    60   ~ 0
+I have assumed pi's sclk & lrclk are bidirectional, need to confirm.
+$EndSCHEMATC
