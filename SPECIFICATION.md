@@ -9,6 +9,7 @@ Equivalent to (FreeDSP expansion connector)[https://github.com/freeDSP/WIKI-AND-
 Hub-side
 
 | Function | Pin | Pin | Function |
+| ---: | :---: | :---: | --- |
 | +12V | 1 | 2 | Gnd |
 | I2S in | 3|4 | Gnd |
 | I2S out| 5|6 | Gnd |
