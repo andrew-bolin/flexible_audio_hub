@@ -19,7 +19,7 @@ The modular system will be entirely open-source so that any interested person ca
 
 ## (Notes Working Towards) The Specification
 
-It's still a work in progress!
+[The Current Specification](SPECIFICATION.md) - very much a work in progress!
 
 The first stage will be electrical & communications protocol only.
 
