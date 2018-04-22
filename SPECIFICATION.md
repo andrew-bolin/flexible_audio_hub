@@ -43,7 +43,8 @@ I2C Interface, address 0x50 (7 bit address) / 0xA0  (8 bit address).
 ## Memory Map	 - Development version 1
 
 Protocol / EEPROM uses odd version numbers for development, even numbers for production. Zero is not a valid version.
-Strings are ASCII (maybe unicode later...)
+Strings are ASCII (maybe unicode later...).
+This version needs only 1kbit of memory.
 
 | Byte | Function | Detail |
 | ---: | -------- | ------ |
@@ -60,5 +61,18 @@ Strings are ASCII (maybe unicode later...)
 | 16-31| Module short name | 16 characters - model number or similar |
 | 32-95| Module long name | 64 characters - e.g. "Quad Stereo Balanced Analog Input"|
 | 96-127|Manufacturer | 32 characters |
-|128-1023| -- Reserved -- | |
-|1024+ | User Configuration (Module defined) ||
+|128-255| -- Reserved -- | |
+|256+ | User Configuration (Module defined) ||
+
+# Module Control
+
+Modules can optionally be controlled by I2C commands.
+Address 0x20 (7 bit address) / 0x40 (8 bit address), for compatibility with [PCA9500](https://www.nxp.com/docs/en/data-sheet/PCA9500.pdf). I2C Command is per PCA9500 output control (will add detail here later).
+
+## Proposed Commands
+* Select 0 (select an input/output/mode)
+* Select 1
+* Select 2
+* Select 3
+* Power
+* Mute
