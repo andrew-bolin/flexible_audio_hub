@@ -31,12 +31,15 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:74cbtlv3245
+LIBS:abb
+LIBS:tca9546a
 LIBS:flexibleaudiohub-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 9
+Sheet 6 10
 Title ""
 Date ""
 Rev ""
@@ -47,15 +50,16 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Conn_02x08_Odd_Even J?
+L Conn_02x08_Odd_Even J2
 U 1 1 5AD72B33
 P 4050 2800
-AR Path="/5AD72A8E/5AD72B33" Ref="J?"  Part="1" 
-AR Path="/5AD7B48D/5AD72B33" Ref="J?"  Part="1" 
-AR Path="/5AD7C84E/5AD72B33" Ref="J?"  Part="1" 
-F 0 "J?" H 4100 3200 50  0000 C CNN
+AR Path="/5AD72A8E/5AD72B33" Ref="J2"  Part="1" 
+AR Path="/5AD7B48D/5AD72B33" Ref="J4"  Part="1" 
+AR Path="/5AD7C84E/5AD72B33" Ref="J6"  Part="1" 
+AR Path="/5AD7C844/5AD72B33" Ref="J5"  Part="1" 
+F 0 "J6" H 4100 3200 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 4100 2300 50  0000 C CNN
-F 2 "" H 4050 2800 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4050 2800 50  0001 C CNN
 F 3 "" H 4050 2800 50  0001 C CNN
 	1    4050 2800
 	1    0    0    -1  

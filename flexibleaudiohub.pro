@@ -1,4 +1,4 @@
-update=Wed 18 Apr 2018 20:30:29 AEST
+update=Sun 22 Apr 2018 11:30:00 AEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,7 +25,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=
+LibDir=../abb_lib
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -59,5 +59,8 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+LibName33=74cbtlv3245
+LibName34=abb
+LibName35=tca9546a
 [general]
 version=1
