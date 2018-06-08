@@ -49,7 +49,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 5900 2800 2    60   Output ~ 0
+Text HLabel 5900 2700 2    60   Output ~ 0
 +12v
 $Comp
 L Barrel_Jack J7
@@ -57,7 +57,7 @@ U 1 1 5AD75AA3
 P 3900 2800
 F 0 "J7" H 3900 3010 50  0000 C CNN
 F 1 "Barrel_Jack" H 3900 2625 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 3950 2760 50  0001 C CNN
+F 2 "Connectors:BARREL_JACK" H 3950 2760 50  0001 C CNN
 F 3 "" H 3950 2760 50  0001 C CNN
 	1    3900 2800
 	1    0    0    -1  
@@ -69,18 +69,16 @@ Wire Wire Line
 $Comp
 L D D1
 U 1 1 5AD75B06
-P 4700 2800
-F 0 "D1" H 4700 2900 50  0000 C CNN
-F 1 "D" H 4700 2700 50  0000 C CNN
-F 2 "Diodes_THT:D_5W_P10.16mm_Horizontal" H 4700 2800 50  0001 C CNN
-F 3 "" H 4700 2800 50  0001 C CNN
-	1    4700 2800
+P 4700 2700
+F 0 "D1" H 4700 2800 50  0000 C CNN
+F 1 "D" H 4700 2600 50  0000 C CNN
+F 2 "Diodes_THT:D_5W_P10.16mm_Horizontal" H 4700 2700 50  0001 C CNN
+F 3 "" H 4700 2700 50  0001 C CNN
+	1    4700 2700
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4200 2800 4550 2800
-Wire Wire Line
-	4850 2800 5900 2800
+	4850 2700 5900 2700
 $Comp
 L L7805 U8
 U 1 1 5AD75B54
@@ -94,7 +92,7 @@ F 3 "" H 5450 3850 50  0001 C CNN
 $EndComp
 Text Notes 3550 3550 0    60   ~ 0
 TODO: replace regs with buck conv.
-Text Label 5150 2800 0    60   ~ 0
+Text Label 5150 2700 0    60   ~ 0
 power_supp_12v
 Text Label 3650 3900 2    60   ~ 0
 power_supp_12v
@@ -241,4 +239,6 @@ Wire Wire Line
 	4100 4750 4100 3900
 Connection ~ 4100 3900
 Connection ~ 4450 4750
+Wire Wire Line
+	4550 2700 4200 2700
 $EndSCHEMATC

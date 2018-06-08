@@ -1,4 +1,4 @@
-update=Sun 22 Apr 2018 11:30:00 AEST
+update=Sun 06 May 2018 20:28:18 AEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=../abb_lib
@@ -62,5 +64,3 @@ LibName32=valves
 LibName33=74cbtlv3245
 LibName34=abb
 LibName35=tca9546a
-[general]
-version=1

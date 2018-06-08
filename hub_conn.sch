@@ -39,7 +39,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 10
+Sheet 5 10
 Title ""
 Date ""
 Rev ""
@@ -59,7 +59,7 @@ AR Path="/5AD7C84E/5AD72B33" Ref="J6"  Part="1"
 AR Path="/5AD7C844/5AD72B33" Ref="J5"  Part="1" 
 F 0 "J6" H 4100 3200 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 4100 2300 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 4050 2800 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 4050 2800 50  0001 C CNN
 F 3 "" H 4050 2800 50  0001 C CNN
 	1    4050 2800
 	1    0    0    -1  
